@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\DTOs\MentionMetadata;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,15 +17,16 @@ class WebmentionFactory extends Factory
      */
     public function definition()
     {
-        $targetUrl = $this->faker->url();
-        $sourceUrl = $this->faker->url();
-        $mentionId = hash('sha256', $sourceUrl . $targetUrl);
+        $mention = MentionMetadata::from(
+            source: $this->faker->url(),
+            target: $this->faker->url(),
+        );
 
         return [
-            'mention_id' => $mentionId,
-            'source_url' => $sourceUrl,
-            'target_url' => $targetUrl,
-            'storage_path' => "{$mentionId}.json"
+            'mention_id' => $mention->id,
+            'source_url' => $mention->source,
+            'target_url' => $mention->target,
+            'storage_path' => "{$mention->id}.json"
         ];
     }
 }
