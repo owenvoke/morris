@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('mention_id');
             $table->string('source_url');
             $table->string('target_url');
-            $table->json('data');
+            $table->string('storage_path');
             $table->timestamps();
         });
     }

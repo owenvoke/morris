@@ -18,12 +18,13 @@ class WebmentionFactory extends Factory
     {
         $targetUrl = $this->faker->url();
         $sourceUrl = $this->faker->url();
+        $mentionId = hash('sha256', $sourceUrl . $targetUrl);
 
         return [
-            'mention_id' => hash('sha256', $sourceUrl . $targetUrl),
+            'mention_id' => $mentionId,
             'source_url' => $sourceUrl,
             'target_url' => $targetUrl,
-            'data' => [],
+            'storage_path' => "{$mentionId}.json"
         ];
     }
 }

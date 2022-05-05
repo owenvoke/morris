@@ -11,19 +11,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property string $mention_id
  * @property string $source_url
  * @property string $target_url
- * @property array $data
- * @property WebmentionStore $webmention_store
+ * @property string $storage_path
  */
 class Webmention extends Model
 {
     use HasFactory;
-
-    protected $casts = [
-        'options' => 'array',
-    ];
-
-    public function webmentionStore(): HasOne
-    {
-        return $this->hasOne(WebmentionStore::class);
-    }
 }

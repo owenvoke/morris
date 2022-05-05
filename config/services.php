@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'webmentionio' => [
+        'webhook_secret' => env('WMIO_WEBHOOK_SECRET'),
+        'token' => env('WMIO_API_TOKEN'),
+        'domain' => env('WMIO_DOMAIN'),
+    ],
+
 ];
