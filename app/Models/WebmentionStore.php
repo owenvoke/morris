@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * @property  int  $id
- * @property  int  $webmention_id
- * @property  string  $path
- * @property  Webmention  $webmention
+ * @property int $id
+ * @property int $webmention_id
+ * @property string $path
+ * @property Webmention $webmention
  */
 class WebmentionStore extends Model
 {

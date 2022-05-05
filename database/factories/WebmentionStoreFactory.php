@@ -17,7 +17,7 @@ class WebmentionStoreFactory extends Factory
     public function definition()
     {
         return [
-            'path' => "{$this->faker->sha256()}.json"
+            'path' => "{$this->faker->sha256()}.json",
         ];
     }
 }

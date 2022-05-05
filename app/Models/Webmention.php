@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
- * @property  int  $id
- * @property  string  $mention_id
- * @property  string  $source_url
- * @property  string  $target_url
- * @property  array  $data
- * @property  WebmentionStore  $webmention_store
+ * @property int $id
+ * @property string $mention_id
+ * @property string $source_url
+ * @property string $target_url
+ * @property array $data
+ * @property WebmentionStore $webmention_store
  */
 class Webmention extends Model
 {

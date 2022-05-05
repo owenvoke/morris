@@ -20,7 +20,7 @@ class WebmentionFactory extends Factory
         $sourceUrl = $this->faker->url();
 
         return [
-            'mention_id' => hash('sha256', $sourceUrl . $targetUrl);
+            'mention_id' => hash('sha256', $sourceUrl . $targetUrl),
             'source_url' => $sourceUrl,
             'target_url' => $targetUrl,
             'data' => [],
